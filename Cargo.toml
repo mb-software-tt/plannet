@@ -1,6 +1,6 @@
 [package]
 name = "plannet"
-version = "0.2.0"
+version = "0.1.0"
 description = "TUI app for tracking tasks"
 authors = ["Marc Bhopalsingh Software <marcbhopalsingh.software@gmail.com>"]
 license = "MIT"
