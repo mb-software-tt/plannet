@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "TUI app for tracking tasks"
 authors = ["Marc Bhopalsingh Software <marcbhopalsingh.software@gmail.com>"]
 license = "MIT"
+repository = "https://github.com/mb-software-tt/plannet"
 edition = "2024"
 
 [dependencies]
@@ -21,3 +22,9 @@ codegen-units = 1
 lto = true
 opt-level = "s"
 strip = true
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
