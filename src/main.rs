@@ -21,8 +21,8 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
-    /// Create a `.plannet/list.toml` in the current directory.
     Init,
+    Version,
 }
 
 fn main() -> color_eyre::Result<()> {
@@ -30,6 +30,10 @@ fn main() -> color_eyre::Result<()> {
 
     match Cli::parse().command {
         Some(Command::Init) => init(),
+        Some(Command::Version) => {
+            println!("plannet {}", env!("CARGO_PKG_VERSION"));
+            Ok(())
+        }
         None => run(),
     }
 }
